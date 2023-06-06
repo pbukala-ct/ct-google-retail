@@ -1,0 +1,23 @@
+{
+  "name": "ct-google-retail",
+  "version": "1.0.0",
+  "type" : "module",
+  "description": "Product synch between ct and google retail catalog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx functions-framework --target=ct-google-retail"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.2.0",
+    "@commercetools/platform-sdk": "^4.9.0",
+    "@commercetools/sdk-client-v2": "^2.2.0",
+    "@google-cloud/retail": "^2.4.1",
+    "axios": ">=0.21.1",
+    "dotenv": "^16.0.3"
+  }
+
+  
+}
