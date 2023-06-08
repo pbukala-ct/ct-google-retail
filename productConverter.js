@@ -233,12 +233,13 @@ export  async function productMapper(ctProduct){
             categoryPath = catName;
             product.tags.push(catName);
             
-            if(ctCategory.ancestors.length !== 0){      
+            if(ctCategory.ancestors.length !== 0){ 
+                if(!product.categories.includes(catName)) product.categories.push(catName);     
                 for (var i = ctCategory.ancestors.length - 1; i >= 0; i--) {
                        let ctAncCategory = await  getCategory(ctCategory.ancestors[i].id);
                         let parentName = ctAncCategory.name[process.env.LANGUAGE]
                         product.tags.push(parentName);
-                        product.categories.push(parentName);
+                        if(!product.categories.includes(parentName))product.categories.push(parentName);
                         categoryPath = parentName + " > " + categoryPath
                         };
             }
