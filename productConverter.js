@@ -82,7 +82,6 @@ export  async function productMapper(ctProduct){
         product.availableQuantity = 1000;
     }
 
-    //TODO: pull category name from ct and build path
     product.categories = [];
     await buildCategories(ctProduct,product)
    
@@ -213,6 +212,8 @@ export  async function productMapper(ctProduct){
 //     "Sports & Fitness > Athletic Clothing > Shoes"
 //   ]
 
+// FIX: Also add each individual category as it is required for category search
+
   async function buildCategories(ctProduct,product){
     try{
         let ctCategories = ctProduct.productProjection.categories;
@@ -231,17 +232,15 @@ export  async function productMapper(ctProduct){
 
             categoryPath = catName;
             product.tags.push(catName);
-
-            if(ctCategory.ancestors.length !== 0){
-              
+            
+            if(ctCategory.ancestors.length !== 0){      
                 for (var i = ctCategory.ancestors.length - 1; i >= 0; i--) {
-
                        let ctAncCategory = await  getCategory(ctCategory.ancestors[i].id);
                         let parentName = ctAncCategory.name[process.env.LANGUAGE]
                         product.tags.push(parentName);
+                        product.categories.push(parentName);
                         categoryPath = parentName + " > " + categoryPath
                         };
-        
             }
 
             product.categories.push(categoryPath);
