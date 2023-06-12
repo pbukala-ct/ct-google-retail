@@ -1,5 +1,5 @@
 import testData from "./testData.mjs"
-import helloPubSub  from "./index.js"
+import helloPubSub  from "./index.mjs"
 
 let buff = Buffer.from(JSON.stringify(testData),'utf8');
 let base64data = buff.toString('base64');

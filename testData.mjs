@@ -25,6 +25,7 @@ const message = {
       productType: {
         typeId: "product-type",
         id: "16e9119a-eb2c-4386-aae0-8e8fb1e94e3f",
+
       },
       name: {
         "de-DE": "Wasserdichtes Fotogehäuse von Seashell",
@@ -52,9 +53,10 @@ const message = {
           "Carcasa fotográfica resistente al agua especialmente diseñada para tomar fotografías bajo el agua",
       },
       categories: [
-        { typeId: "category", id: "9907524e-ee59-4d41-9cc0-2aa75739ddfc" },
-        { typeId: "category", id: "f20c3554-4a8f-4ea1-82d4-61406d614971" },
-        { typeId: "category", id: "e1c54bbd-266a-44f2-9e32-8a1f071f7967" },
+        { typeId: "category", id: "c306ce40-d718-4284-ba97-ed8e205303a8 "},
+        { typeId: "category",       id: "d796129a-2297-467f-b37d-59431e496a1d"},
+        { typeId: "category",   id: "7e62b715-8554-46b9-872e-f4c443046f60"}
+       
       ],
       categoryOrderHints: {},
       slug: {
