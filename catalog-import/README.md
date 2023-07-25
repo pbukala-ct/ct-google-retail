@@ -1,5 +1,5 @@
 # ct-google-retail
-Generating catalog from commeretools Fashion Catalog to google Retail format
+Generating catalog from commeretools Fashion Catalog to Google Retail format
 
 1) Set enviroment variables
 
